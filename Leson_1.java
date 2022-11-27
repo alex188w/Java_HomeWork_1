@@ -81,6 +81,9 @@ public class Leson_1 {
     // заменены знаком вопроса, например 2? + ?5 = 69. Требуется восстановить
     // выражение до верного равенства. Предложить хотя бы одно решение или сообщить,
     // что его нет.
+
+    // Решение представлено для случая двухзначных чисел и в уравнении всего две
+    // неизвестные цифры (т.е. уравнение имеет единственное решение).
     public static void FindTrueNumber() {
         Scanner iScacanner = new Scanner(System.in);
         System.out.printf("Введите двухзначное число q (если цифра неизвестна - введите '?''): ");
@@ -155,7 +158,7 @@ public class Leson_1 {
                 }
                 if (e1 == '?') {
                     correction3 = 1;
-                }                 
+                }
             }
         } else {
             e2_1 = Character.digit(e2, 10);
@@ -165,11 +168,6 @@ public class Leson_1 {
         int num2 = (w1_1 + correction1) * 10 + w2_1;
         int num3 = (e1_1 + correction3) * 10 + e2_1;
 
-       
-        System.out.println(correction1);
-        System.out.println(correction2);
-        System.out.println(correction3);
-        // System.out.println(num3);
         System.out.println("Верное восстановленное равенство имеет вид: ");
         System.out.println(num1 + " + " + num2 + " = " + num3);
 
